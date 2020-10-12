@@ -18,6 +18,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 import java.util.Random;
 
@@ -395,22 +396,22 @@ public class StreamTest {
         }
     }
 
-    @Test
+//    @Test
     public void testStream() {
         testStreamWrite(0);
     }
 
-    @Test
+//    @Test
     public void testStreamPlain() {
         testStreamWrite(Stream.PROPERTY_PLAIN);
     }
 
-    @Test
+//    @Test
     public void testStreamReliable() {
         testStreamWrite(Stream.PROPERTY_RELIABLE);
     }
 
-    @Test
+//    @Test
     public void testStreamReliablePlain() {
         int stream_options = 0;
 
@@ -420,7 +421,7 @@ public class StreamTest {
         testStreamWrite(stream_options);
     }
 
-    @Test
+//    @Test
     public void testStreamMultiplexing() {
         int stream_options = 0;
 
@@ -429,7 +430,7 @@ public class StreamTest {
         testStreamWrite(stream_options);
     }
 
-    @Test
+//    @Test
     public void testStreamPlainMultiplexing() {
         int stream_options = 0;
 
@@ -439,7 +440,7 @@ public class StreamTest {
         testStreamWrite(stream_options);
     }
 
-    @Test
+//    @Test
     public void testStreamReliableMultiplexing() {
         int stream_options = 0;
 
@@ -449,7 +450,7 @@ public class StreamTest {
         testStreamWrite(stream_options);
     }
 
-    @Test
+//    @Test
     public void testStreamReliablePlainMultiplexing() {
         int stream_options = 0;
 
@@ -460,7 +461,7 @@ public class StreamTest {
         testStreamWrite(stream_options);
     }
 
-    @Test
+//    @Test
     public void testStreamReliablePortforwarding() {
         int stream_options = 0;
 
@@ -471,7 +472,7 @@ public class StreamTest {
         testStreamWrite(stream_options);
     }
 
-    @Test
+//    @Test
     public void testStreamReliablePlainPortforwarding() {
         int stream_options = 0;
 
@@ -485,7 +486,7 @@ public class StreamTest {
 
     private static boolean isConnectToRobot = false;
 
-    @BeforeClass
+//    @BeforeClass
     public static void setUp() {
         robot = RobotConnector.getInstance();
         if (!robot.isConnected()) {
@@ -513,7 +514,7 @@ public class StreamTest {
         }
     }
 
-    @AfterClass
+//    @AfterClass
     public static void tearDown() {
         sessionManager.cleanup();
         carrier.kill();
@@ -523,7 +524,7 @@ public class StreamTest {
         }
     }
 
-    @Before
+//    @Before
     public void setUpCase() {
         robot.clearSocketBuffer();
     }
